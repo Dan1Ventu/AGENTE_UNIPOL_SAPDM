@@ -1,4 +1,3 @@
-
 import streamlit as st
 import os
 from datetime import datetime
@@ -18,7 +17,7 @@ PROJECT_ID = os.getenv("PROJECT_ID", "data-platform-framework")
 LOCATION = os.getenv("LOCATION", "europe-west4")
 RESOURCE_ID = os.getenv(
     "RESOURCE_ID",
-    "projects/1014880272171/locations/europe-west4/reasoningEngines/4411574902172155904"
+    "projects/1014880272171/locations/europe-west4/reasoningEngines/7231813431324573696"
 )
 
 
@@ -183,8 +182,8 @@ def main():
         page_icon="🤖",
         layout="wide"
     )
-    st.title("🤖 Chat Agente Vertex AI (Agent Engine)")
-    st.markdown("Interagisci con il tuo agente Vertex AI già deployato.")
+    st.title("Assistente documenti di bilancio")
+    st.markdown("")
 
     # Inizializzazione Vertex AI con il tuo progetto/region
     if not initialize_vertex_ai():
@@ -282,13 +281,10 @@ def main():
     st.markdown(
         f"""
         ---
-        ### Configurazione
-        - **User ID**: `{user_id}`
-        - **Project ID**: `{PROJECT_ID}`
-        - **Location**: `{LOCATION}`
-        - **Resource ID**: `{RESOURCE_ID}`
-
-        Assicurati che l'Agent Engine sia deployato e che il Resource ID sia corretto.
+        ### Funzionalità Demo
+        - Recupero informazioni da Internet o da Datacache SAP DM
+        - Aggiornamento paragrafi descrittivi e tecnici 
+        - Supporto generico nella scrittura con AI
         """
     )
 
